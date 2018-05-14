@@ -68,9 +68,12 @@
 
     .modal-body-col {
         font-size: 16px;
-        display: flex;
 
-        img {
+        @media(min-width: $screen-tablet-min) {
+            display: flex;
+        }
+
+        .modal-body-col-imgCharacters {
             max-width: 240px;
             margin-right: 24px;
             border-radius: 6px;
@@ -79,20 +82,6 @@
 
         li {
             margin: 0 0 8px;
-
-            dt {
-                float: left;
-                width: 160px;
-                overflow: hidden;
-                clear: left;
-                text-align: right;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-
-            dd {
-                margin-left: 180px;
-            }
         }
     }
 }
