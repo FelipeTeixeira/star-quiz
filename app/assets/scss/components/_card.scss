@@ -1,0 +1,65 @@
+$spaceCard: 32px;
+
+card {
+    color: $black;
+    margin: $spaceCard / 2;
+    box-shadow: 0 2px 6px 0 hsla(205,9%,48%,.14);
+    width: 100%;
+    position: relative;
+
+
+    @media (min-width: $screen-phone-min) {
+        flex: 1 0 50%;
+        max-width: calc(50% -  #{$spaceCard});
+    }
+
+    @media (min-width: $screen-tablet-min) {
+        flex: 1 0 25%;
+        max-width: calc(25% - #{$spaceCard});
+    }
+
+    @media (min-width: $screen-monitor-min) {
+        flex: 1 0 20%;
+        max-width: calc(20% - #{$spaceCard});
+    }
+
+    .card-imgCharacter {
+        display: block;
+        border-radius: 6px;
+    }
+
+    .card-action {
+        text-align: center;
+        padding: 8px 0;
+        background-color: rgba(0, 0, 0, .7);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .card-iconAction {
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        display: inline-block;
+        margin: 0 16px;
+    }
+
+    .card-status {
+        // Fundo branco pro check
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        font-size: 30px;
+        background-color: #FFF;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: flex;
+
+        .icon-check {
+            fill: $green;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="starQuiz-app">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#488AFF">
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>
+        Star Quiz
+    </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+
+    <script src="js/main.js"></script>
+    <!-- DIRECTIVES -->
+    <script src="js/directives/loadingDirective.js"></script>
+    <script src="js/directives/paginationDirective.js"></script>
+    <script src="js/directives/modalDirective.js"></script>
+    <script src="js/directives/cardDirective.js"></script>
+
+    <!-- SERVICES -->
+    <script src="js/services/charactersService.js"></script>
+    <script src="js/services/peopleService.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="js/controllers/loginCtrl.js"></script>
+    <script src="js/controllers/charactersCtrl.js"></script>
+    <script src="js/controllers/rankingCtrl.js"></script>
+
+    <!-- MODAL -->
+    <script src="js/controllers/modal/detailsModalCtrl.js"></script>
+    <script src="js/controllers/modal/answerModalCtrl.js"></script>
+    <script src="js/controllers/modal/finishModalCtrl.js"></script>
+
+    <!-- FILTER -->
+    <script src="js/filters/secondsTimerFilter.js"></script>
+    <script src="js/filters/splitFilter.js"></script>
+</head>
+    <body>
+        <div ng-include="'view/layout/svg.html'"></div>
+        <main>
+            <ng-view></ng-view>
+        </main>
+    </body>
+</html>

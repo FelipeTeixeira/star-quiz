@@ -1,0 +1,13 @@
+<section class="pgLogin">
+    <div ng-include="'view/layout/loading-darth-vader.html'"></div>
+
+    <img src="assets/img/starQuiz-logo.png" alt="StarQuiz - Logo" width="300" height="42">
+
+    <a href="/personagens" class="btn btn-block btn-large btnPlay">
+        Jogar
+    </a>
+
+    <a href="/ranking" class="btn btn-large" ng-if="loginCtrl.scoreListStorage">
+        Ver Ranking
+    </a>
+</section>

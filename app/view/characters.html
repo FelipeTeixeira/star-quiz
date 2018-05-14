@@ -1,0 +1,19 @@
+<header ng-include="'view/layout/header.html'"></header>
+
+<section class="container u-flex">
+    <card
+        ng-repeat="character in charactersCtrl.results.characterArray"
+        image="{{character.character.url | splitFilter:'/' : 5}}"
+        is-answered="charactersCtrl.isAnswered(character.character.name)"
+        open-answer="charactersCtrl.openModalAnswer(character)"
+        open-details="charactersCtrl.openModalDetails(character)">
+    </card>
+</section>
+
+<pagination
+    ng-show="charactersCtrl.results.characterArray"
+    previous="charactersCtrl.previous()"
+    next="charactersCtrl.next()"
+></pagination>
+
+<loading ng-show="charactersCtrl.loading"></loading>

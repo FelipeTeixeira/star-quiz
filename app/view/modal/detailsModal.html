@@ -1,0 +1,90 @@
+<modal title="Details">
+    <div class="modal-body">
+
+        <div class="modal-body-col">
+            <figure>
+                <img ng-src="assets/img/characters/{{detailsModalCtrl.character.url | splitFilter:'/' : 5}}.jpg" class="card-imgCharacter">
+            </figure>
+
+            <div>
+                <ul>
+                    <li ng-show="detailsModalCtrl.charactersSpecies">
+                        <span ng-show="detailsModalCtrl.charactersSpecies">
+                            Specie:
+                            <strong>
+                                {{detailsModalCtrl.charactersSpecies}}
+                            </strong>
+                        </span>
+
+                        <span ng-show="!detailsModalCtrl.charactersPlanets">
+                            <span ng-include="'view/layout/svgLoading.html'"></span>
+                        </span>
+                    </li>
+                    <li ng-show="detailsModalCtrl.character.height">
+                        Height:
+                        <strong>
+                            {{detailsModalCtrl.character.height}}
+                        </strong>
+                    </li>
+                    <li ng-show="detailsModalCtrl.character.hair_color">
+                        Hair:
+                        <strong>
+                            {{detailsModalCtrl.character.hair_color}}
+                        </strong>
+                    </li>
+                    <li ng-show="detailsModalCtrl.charactersPlanets">
+                        <span ng-show="detailsModalCtrl.charactersPlanets">
+                            Planet:
+                            <strong>
+                                {{detailsModalCtrl.charactersPlanets}}
+                            </strong>
+                        </span>
+
+                        <span ng-show="!detailsModalCtrl.charactersPlanets">
+                            <span ng-include="'view/layout/svgLoading.html'"></span>
+                        </span>
+                    </li>
+                </ul>
+
+                <p>
+                    <span ng-show="detailsModalCtrl.charactersFilms">
+                            Movies:
+                        <strong>
+                            {{detailsModalCtrl.charactersFilms}}
+                        </strong>
+                    </span>
+
+                    <span ng-show="!detailsModalCtrl.charactersFilms">
+                        <span ng-include="'view/layout/svgLoading.html'"></span>
+                    </span>
+                </p>
+
+                <p>
+                    <span ng-if="!detailsModalCtrl.character.vehicles.length && !detailsModalCtrl.charactersVehicles">
+                        Não Possui veiculos
+                    </span>
+
+                    <span ng-show="detailsModalCtrl.character.vehicles.length">
+                        <span ng-show="detailsModalCtrl.charactersVehicles">
+                            Vehicles:
+                            <strong>
+                                {{detailsModalCtrl.charactersVehicles}}
+                            </strong>
+                        </span>
+
+                        <span ng-show="!detailsModalCtrl.charactersVehicles">
+                            <span ng-include="'view/layout/svgLoading.html'"></span>
+                        </span>
+                    </span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn" ng-click="detailsModalCtrl.closeModal()">
+            Fechar
+        </button>
+    </div>
+</modal>

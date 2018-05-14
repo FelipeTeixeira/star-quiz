@@ -1,0 +1,15 @@
+<div class="header container">
+    <figure>
+        <img src="assets/img/starQuiz-logo.png" alt="StarQuiz - Logo" width="300" height="42">
+    </figure>
+
+    <div class="header-actions">
+        <strong class="header-time" ng-show="charactersCtrl.timeLeft">
+            {{charactersCtrl.timeLeft | secondsTimerFilter | date:'mm:ss'}}
+        </strong>
+
+        <a href="/personagens" class="btn btn-large" ng-show="rankingCtrl.scoreListStorage">
+            Jogar
+        </a>
+    </div>
+</div>

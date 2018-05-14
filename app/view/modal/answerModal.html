@@ -1,0 +1,20 @@
+<modal title="Nome do Personagem">
+    <div class="modal-body">
+        <form action="#">
+            <div class="formGroup">
+                <label>Nome do Personagem?</label>
+                <input type="text" ng-model="answerModalCtrl.inputName">
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn" ng-click="answerModalCtrl.closeModal()">
+            Cancelar
+        </button>
+
+        <button class="btn btn-green" ng-click="answerModalCtrl.answer()">
+            Confirmar
+        </button>
+    </div>
+</modal>

@@ -1,0 +1,13 @@
+.list {
+    background-color: #FFF;
+    border-radius: 6px;
+    padding: 12px 24px;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto 16px;
+
+    .list-name {
+        width: 70px;
+        display: inline-block;
+    }
+}

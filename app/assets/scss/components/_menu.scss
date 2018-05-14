@@ -1,0 +1,35 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    bottom: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+    .menu-active {
+        color: #61b6ef;
+    }
+
+    a {
+        color: #ccc;
+        display: inline-flex;
+        width: 80px;
+        justify-content: center;
+    }
+
+    .menu-plus {
+        margin: auto;
+    }
+
+    .icon {
+        font-size: 30px;
+
+        &.icon-plus {
+            font-size: 34px;
+            color: #5c97ff;
+        }
+    }
+
+}

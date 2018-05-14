@@ -1,0 +1,23 @@
+<img ng-src="assets/img/characters/{{image}}.jpg" class="card-imgCharacter">
+
+<span class="card-status" ng-show="!isAnswered()" data-tooltip="Personagem Correto :)">
+    <svg class="icon icon-check">
+        <use xlink:href="#icon-check"></use>
+    </svg>
+</span>
+
+<div class="card-action" ng-show="isAnswered()">
+
+    <a href="#" data-tooltip="Responder" class="card-iconAction" ng-click="openAnswer()">
+        <svg class="icon icon-ask">
+            <use xlink:href="#icon-ask"></use>
+        </svg>
+    </a>
+
+    <a href="#" data-tooltip="Detalhes personagem" class="card-iconAction" ng-click="openDetails()">
+        <svg class="icon icon-details">
+            <use xlink:href="#icon-details"></use>
+        </svg>
+    </a>
+</div>
+

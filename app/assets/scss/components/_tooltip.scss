@@ -1,0 +1,53 @@
+[data-tooltip] {
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+        outline: 0;
+        z-index: 9;
+    }
+
+    // TOOLTIP ARROW
+    &:before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 4px 6px 0 6px;
+        border-style: solid;
+        opacity: 0;
+        transition: opacity .2s ease;
+        border-color: $blue transparent transparent transparent;
+    }
+
+    // TOOLTIP BOX
+    &:after {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 14px;
+        text-transform: initial;
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        top: -6px;
+        transform: translateX(-50%) translateY(-100%);
+        background-color: $blue;
+        text-align: center;
+        color: #fff;
+        border-radius: 4px;
+        pointer-events: none;
+        padding: 8px;
+        opacity: 0;
+        transition: opacity .2s ease;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        &:after,
+        &:before {
+            opacity:1;
+        }
+    }
+}

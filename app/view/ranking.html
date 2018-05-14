@@ -1,0 +1,16 @@
+<header ng-include="'view/layout/header.html'"></header>
+
+<section class="container">
+    <div ng-repeat="user in rankingCtrl.scoreListStorage" class="list">
+        <ul>
+            <li>
+                <span class="list-name">Usuário:</span>
+                <strong>{{user.name}}</strong>
+            </li>
+            <li>
+                <span class="list-name"> E-mail:</span>
+                <strong>{{user.email}}</strong>
+            </li>
+        </ul>
+    </div>
+</section>

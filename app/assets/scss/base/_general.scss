@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing();
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-width: 320px;
+    background-color: #F5F7FA;
+    font-family: $font;
+    font-size: 16px;
+    color: $black;
+    overflow-x: hidden;
+}
+
+main {
+    display: block;
+    padding: 0 16px;
+    z-index: $z-index-main;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+button {
+    color: $blue;
+    line-height: normal;
+    text-decoration: none;
+    transition: background-color .2s ease, color .2s ease;
+    cursor: pointer;
+}
+
+input,
+textarea,
+select {
+    font-family: $font;
+    transition: border-color .2s ease;
+    border-radius: 0;
+    border: 2px solid #d7d7d7;
+    padding: 8px 10px;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 6px;
+
+    &:focus,
+    &:active {
+        outline: 0;
+        border-color: $blue;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}

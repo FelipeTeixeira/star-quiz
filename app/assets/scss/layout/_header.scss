@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    padding: 30px 16px 20px;
+
+    .header-time {
+        font-size: 32px;
+        line-height: 32px;
+        color: #FFF;
+        animation: pulseTime 0.75s infinite alternate;
+        border: 3px solid #FFF;
+        padding: 4px 8px;
+        border-radius: 6px;
+        margin-top: 24px;
+        height: 46px;
+        display: block;
+
+        @media(min-width: $screen-phone-min) {
+            margin-top: 0;
+        }
+    }
+
+    .header-actions {
+        @media(min-width: $screen-phone-min) {
+            margin-left: auto;
+        }
+    }
+}
+
+ @keyframes pulseTime {
+    0% {
+        border-color: #ffee58;
+        color: #ffee58;
+    }
+    100% {
+        color: #FFF;
+        border-color: #FFF;
+    }
+}
+
