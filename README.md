@@ -1,3 +1,17 @@
+
+# Como jogar?
+- Você deve escrever o nome do personagem de acordo com a respectiva imagem que aparece.
+
+# Acertos
+- Cada acerto vale 10 pontos, os erros não descontam ponto algum! Então tente, tente e tente mais! 
+  Você pode optar por pular o personagem e também não debitará nenhum ponto ganho.
+
+# Ajuda
+- A qualquer momento você pode clicar no no botão com o icone  que aparecerá dicas sobre o personagem, mas fique atento! os acertos utilizando o botão de ajuda valem apenas 5 pontos.
+
+
+<br>    
+
 Obs: tentei utilizar API do Flickr porem as imagens ficaram muito distorcidas e sem qualidade alguma, ai preferi usar algo estatico, codigo de exemplo a baixo
 
 <pre>
