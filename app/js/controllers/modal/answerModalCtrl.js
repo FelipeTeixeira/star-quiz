@@ -8,32 +8,34 @@
         let vm = this;
         vm.isOpen = true;
 
+        // ANGULAR TYPEAHEAD
+        vm.nameCharacters = nameCharacters;
+
         vm.closeModal = function () {
             close();
         };
 
-        // ANGULAR TYPEAHEAD
-        vm.nameCharacters = nameCharacters;
+        vm.submit = function () {
+            if (vm.form.$valid) {
+                let answerInput = vm.inputName.toLowerCase(),
+                    originalName = character.quiz.name.toLowerCase(),
+                    scoreAnswer = 10;
 
-        vm.answer = function () {
-            let answerInput = vm.inputName.toLowerCase(),
-                originalName = character.quiz.name.toLowerCase(),
-                scoreAnswer = 10;
-
-            if (answerInput !== originalName) {
-                scoreAnswer = 0;
-            } else if (answerInput === originalName && character.usedHelp) {
-                scoreAnswer = 5;
-            }
-
-            if (scoreAnswer === 10 || scoreAnswer === 5) {
-                let answer = {
-                    score: scoreAnswer,
-                    originalName: originalName
+                if (answerInput !== originalName) {
+                    scoreAnswer = 0;
+                } else if (answerInput === originalName && character.usedHelp) {
+                    scoreAnswer = 5;
                 }
 
-                answerArray.push(answer);
-                close();
+                if (scoreAnswer === 10 || scoreAnswer === 5) {
+                    let answer = {
+                        score: scoreAnswer,
+                        originalName: originalName
+                    }
+
+                    answerArray.push(answer);
+                    close();
+                }
             }
         }
     };

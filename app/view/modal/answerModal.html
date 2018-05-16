@@ -1,29 +1,31 @@
 <modal title="Personagem">
-    <div class="modal-body">
+    <form novalidate name="answerModalCtrl.form" ng-submit="answerModalCtrl.submit()">
+        <div class="modal-body">
 
-        <div class="formGroup search">
-            <label>Qual é o nome do Personagem?</label>
+            <div class="formGroup search">
+                <label>Qual é o nome do Personagem?</label>
 
-            <input type="text"
-                focus-me="answerModalCtrl.isOpen"
-                ng-model="answerModalCtrl.inputName"
-                ng-model-options="{debounce: 400}"
-                uib-typeahead="state for state in answerModalCtrl.nameCharacters | filter:$viewValue | limitTo:8"
-                typeahead-min-length='3'
-                typeahead-no-results="noResults"
-                typeahead-popup-template-url="view/directives/typeahead/typeahead-popup.html"
-                typeahead-template-url="view/directives/typeahead/typeahead-match.html">
+                <input type="text"
+                    ng-model="answerModalCtrl.inputName"
+                    focus-me="answerModalCtrl.isOpen"
+                    ng-model-options="{debounce: 400}"
+                    uib-typeahead="state for state in answerModalCtrl.nameCharacters | filter:$viewValue | limitTo:8"
+                    typeahead-min-length='3'
+                    typeahead-no-results="noResults"
+                    typeahead-popup-template-url="view/directives/typeahead/typeahead-popup.html"
+                    typeahead-template-url="view/directives/typeahead/typeahead-match.html">
+            </div>
+
         </div>
 
-    </div>
+        <div class="modal-footer">
+            <button type="button" class="btn" ng-click="answerModalCtrl.closeModal()">
+                Cancelar
+            </button>
 
-    <div class="modal-footer">
-        <button class="btn" ng-click="answerModalCtrl.closeModal()">
-            Cancelar
-        </button>
-
-        <button class="btn btn-green" ng-click="answerModalCtrl.answer()">
-            Confirmar
-        </button>
-    </div>
+            <button type="submit" class="btn btn-green" ng-disabled="answerModalCtrl.form.$invalid">
+                Confirmar
+            </button>
+        </div>
+    </form>
 </modal>
