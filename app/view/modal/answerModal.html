@@ -5,6 +5,7 @@
             <label>Qual é o nome do Personagem?</label>
 
             <input type="text"
+                focus-me="answerModalCtrl.isOpen"
                 ng-model="answerModalCtrl.inputName"
                 ng-model-options="{debounce: 400}"
                 uib-typeahead="state for state in answerModalCtrl.nameCharacters | filter:$viewValue | limitTo:8"

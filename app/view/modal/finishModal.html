@@ -11,7 +11,9 @@
 
             <div class="formGroup">
                 <label>Nome</label>
-                <input type="text" ng-model="finishModalCtrl.scoreList.name" required>
+                <input type="text"
+                    focus-me="finishModalCtrl.isOpen"
+                    ng-model="finishModalCtrl.scoreList.name" required>
             </div>
 
             <div class="formGroup">

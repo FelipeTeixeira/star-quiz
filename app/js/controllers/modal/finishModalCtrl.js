@@ -9,7 +9,7 @@
         let vm = this,
             localStorageList,
             scoreListStorage;
-
+        vm.isOpen = true;
         vm.totalScore = 0;
         vm.scoreList = {};
 

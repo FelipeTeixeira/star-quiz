@@ -6,6 +6,7 @@
 
     function AnswerModalCtrl(close, character, answerArray, nameCharacters) {
         let vm = this;
+        vm.isOpen = true;
 
         vm.closeModal = function () {
             close();
