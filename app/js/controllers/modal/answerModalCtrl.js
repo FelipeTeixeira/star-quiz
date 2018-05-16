@@ -17,7 +17,7 @@
 
         vm.answer = function () {
             let answerInput = vm.inputName.toLowerCase(),
-                originalName = character.character.name.toLowerCase(),
+                originalName = character.quiz.name.toLowerCase(),
                 scoreAnswer = 10;
 
             if (answerInput !== originalName) {

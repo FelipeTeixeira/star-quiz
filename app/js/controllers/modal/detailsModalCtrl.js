@@ -11,23 +11,23 @@
             close();
         };
 
-        peopleService.loadFilms(character.character).then(function (films) {
+        peopleService.loadFilms(character.quiz).then(function (films) {
             vm.charactersFilms = films;
         });
 
-        peopleService.loadSpecies(character.character).then(function (species) {
+        peopleService.loadSpecies(character.quiz).then(function (species) {
             vm.charactersSpecies = species;
         });
 
-        peopleService.loadVehicles(character.character).then(function (vehicles) {
+        peopleService.loadVehicles(character.quiz).then(function (vehicles) {
             vm.charactersVehicles = vehicles;
         });
 
-        peopleService.loadPlanets(character.character).then(function (planets) {
+        peopleService.loadPlanets(character.quiz).then(function (planets) {
             vm.charactersPlanets = planets;
         });
 
-        vm.character = character.character;
+        vm.character = character.quiz;
 
     };
 

@@ -3,8 +3,8 @@
 <section class="container u-flex">
     <card
         ng-repeat="character in charactersCtrl.results.characterArray"
-        image="{{character.character.url | splitFilter:'/' : 5}}"
-        is-answered="charactersCtrl.isAnswered(character.character.name)"
+        image="{{character.quiz.url | splitFilter:'/' : 5}}"
+        is-answered="charactersCtrl.isAnswered(character.quiz.name)"
         open-answer="charactersCtrl.openModalAnswer(character)"
         open-details="charactersCtrl.openModalDetails(character)">
     </card>

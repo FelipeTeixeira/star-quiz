@@ -9,7 +9,7 @@
                 ng-model="answerModalCtrl.inputName"
                 ng-model-options="{debounce: 400}"
                 uib-typeahead="state for state in answerModalCtrl.nameCharacters | filter:$viewValue | limitTo:8"
-                typeahead-min-length='4'
+                typeahead-min-length='3'
                 typeahead-no-results="noResults"
                 typeahead-popup-template-url="view/directives/typeahead/typeahead-popup.html"
                 typeahead-template-url="view/directives/typeahead/typeahead-match.html">

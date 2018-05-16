@@ -21,11 +21,11 @@
                         results.previous = response.data.previous;
 
                         response.data.results.forEach(function (data) {
-                            let character = {
-                                character: data,
+                            let quiz = {
+                                quiz: data,
                                 usedHelp: false
                             }
-                            results.characterArray.push(character);
+                            results.characterArray.push(quiz);
                         });
 
                         return results;

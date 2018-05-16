@@ -40,7 +40,7 @@
                 }
                 // ANGULAR TYPEAHEAD
                 nameCharacters = result.characterArray.map(function (element) {
-                    return element.character.name;
+                    return element.quiz.name;
                 });
 
                 _loadingClose();
