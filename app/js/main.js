@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('starQuiz-app', ['ngRoute', 'angularModalService'])
+        .module('starQuiz-app', ['ngRoute', 'angularModalService', 'ui.bootstrap'])
         .config(function ($routeProvider, $locationProvider) {
 
             $locationProvider.html5Mode(true);

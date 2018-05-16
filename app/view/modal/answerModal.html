@@ -1,11 +1,18 @@
-<modal title="Nome do Personagem">
+<modal title="Personagem">
     <div class="modal-body">
-        <form action="#">
-            <div class="formGroup">
-                <label>Nome do Personagem?</label>
-                <input type="text" ng-model="answerModalCtrl.inputName">
-            </div>
-        </form>
+
+        <div class="formGroup search">
+            <label>Qual é o nome do Personagem?</label>
+
+            <input type="text"
+                ng-model="answerModalCtrl.inputName"
+                ng-model-options="{debounce: 400}"
+                uib-typeahead="state for state in answerModalCtrl.nameCharacters | filter:$viewValue | limitTo:8"
+                typeahead-no-results="noResults"
+                typeahead-popup-template-url="view/directives/typeahead/typeahead-popup.html"
+                typeahead-template-url="view/directives/typeahead/typeahead-match.html">
+        </div>
+
     </div>
 
     <div class="modal-footer">

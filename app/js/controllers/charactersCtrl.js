@@ -7,7 +7,8 @@
     function CharactersCtrl(charactersService, ModalService, $interval) {
         let vm = this,
             answerArray = [],
-            interval;
+            interval,
+            nameCharacters;
 
         vm.timeLeft = 120;
 
@@ -33,13 +34,17 @@
             _loadingShow();
 
             charactersService.loadCharacters(urlPage).then(function (result) {
-                _loadingClose();
-                vm.results = result;
-
-                // first access
+                // primeiro acesso, iniciar tempo
                 if (urlPage == null) {
                     _timer();
                 }
+                // ANGULAR TYPEAHEAD
+                nameCharacters = result.characterArray.map(function (element) {
+                    return element.character.name;
+                });
+
+                _loadingClose();
+                vm.results = result;
             });
         }
 
@@ -99,7 +104,8 @@
                 controllerAs: "answerModalCtrl",
                 inputs: {
                     character: character,
-                    answerArray: answerArray
+                    answerArray: answerArray,
+                    nameCharacters: nameCharacters
                 }
             });
         }

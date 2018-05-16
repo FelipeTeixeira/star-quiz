@@ -4,12 +4,15 @@
         .module('starQuiz-app')
         .controller('AnswerModalCtrl', AnswerModalCtrl);
 
-    function AnswerModalCtrl(close, character, answerArray) {
+    function AnswerModalCtrl(close, character, answerArray, nameCharacters) {
         let vm = this;
 
         vm.closeModal = function () {
             close();
         };
+
+        // ANGULAR TYPEAHEAD
+        vm.nameCharacters = nameCharacters;
 
         vm.answer = function () {
             let answerInput = vm.inputName.toLowerCase(),
@@ -34,5 +37,5 @@
         }
     };
 
-    AnswerModalCtrl.$inject = ['close', 'character', 'answerArray'];
+    AnswerModalCtrl.$inject = ['close', 'character', 'answerArray', 'nameCharacters'];
 })();
