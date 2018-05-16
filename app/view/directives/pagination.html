@@ -1,9 +1,9 @@
 <div class="pagination">
-    <button class="btn btn-medium" ng-click="previous()" ng-show="previous">
+    <button class="btn btn-medium" ng-click="previousAction()" ng-disabled="!previousStatus">
         Anterior
     </button>
 
-    <button class="btn btn-medium" ng-click="next()">
+    <button class="btn btn-medium" ng-click="nextAction()" ng-disabled="!nextStatus">
         Próximo
     </button>
 </div>

@@ -9,8 +9,10 @@
             ddo.restrict = "E";
 
             ddo.scope = {
-                previous: "&",
-                next: "&"
+                previousAction: "&",
+                previousStatus: "@",
+                nextAction: "&",
+                nextStatus: "@"
             };
 
             ddo.templateUrl = "../view/directives/pagination.html";

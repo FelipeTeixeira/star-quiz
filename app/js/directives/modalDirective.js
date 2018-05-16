@@ -11,9 +11,7 @@
 
 
             ddo.scope = {
-                title: '@',
-                closeModal: '&?',
-                saveModal: '&?'
+                title: '@'
             };
 
             ddo.templateUrl = '../view/directives/modal.html';

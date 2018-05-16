@@ -12,8 +12,10 @@
 
 <pagination
     ng-show="charactersCtrl.results.characterArray"
-    previous="charactersCtrl.previous()"
-    next="charactersCtrl.next()"
+    previous-Action="charactersCtrl.previous()"
+    previous-Status="{{charactersCtrl.results.previous}}"
+    next-Action="charactersCtrl.next()"
+    next-Status="{{charactersCtrl.results.next}}"
 ></pagination>
 
 <loading ng-show="charactersCtrl.loading"></loading>
